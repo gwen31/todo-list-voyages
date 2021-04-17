@@ -1,6 +1,6 @@
 import React from 'react';
-import ListGard from "./components/Listgard";
-import './App.css';
+import ListGard from "./components/Listgard.jsx";
+
 
 function App() {
   return (

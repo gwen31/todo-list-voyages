@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(165, 164, 164);
+}
+.title{
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+.card{
+    width: 300px ;
+    margin: auto;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: rgb(221, 217, 217);
+    font-size: 18px;
+}
+button{
+    padding: 5px;
+    border-radius: 6px;
+    background-color: rgb(148, 146, 146);
+}
+input{
+    padding: 5px;
+    border-radius: 6px; 
+}
