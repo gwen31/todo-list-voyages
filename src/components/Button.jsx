@@ -1,5 +1,5 @@
 const Button = ({ handleClick }) => {
-    return <button onClick={() => handleClick()}>X</button>;
+    return <button className="btn-delete" onClick={() => handleClick()}>👍</button>;
   };
   
   export default Button;

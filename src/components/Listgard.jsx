@@ -2,7 +2,7 @@ import { useState } from 'react';
 import List from "./List";
 import TodoList from "./TodoList";
 import ListAdder from "./ListAdder";
-import './listgard.css';
+
 
 
 const ListGard =()=> {

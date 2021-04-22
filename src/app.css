@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(211, 207, 207);
+}
+h1 {
+    text-align: center;
+}
+h2{
+    text-align: center;
+}
+li{
+    text-align: center;
+    list-style: none;
+    font-size: 20px;
+}
+.card{
+    width: 400px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 25px;
+    background-color:rgb(250, 244, 244);
+}
+button{
+    font-size: 25px;
+    background-color:rgb(250, 244, 244);
+    border: none;
+}
+.btn-delete{
+    padding: 2px;
+    font-size: 20px;
+    margin-left: 15px;
+    margin-top: 10px;
+    background-color:rgb(250, 244, 244);
+    border: none;
+}
+input{
+    padding: 5px;
+    margin-left: 90px;
+    border-radius: 5px;
+    font-size: 15px;
+}

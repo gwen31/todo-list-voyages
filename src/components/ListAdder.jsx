@@ -4,7 +4,7 @@ const ListAdder = ({ addList })=> {
     const [input, setInput] = useState('');
 
     const handleInput = (event) =>{
-        if (!event.target.value){
+        if (!event.target.value.match(/\d/g)){
             setInput(event.target.value);
         }
     };
@@ -16,7 +16,7 @@ return (
         value={input}
         onChange={(event) => handleInput(event)}
       />
-      <button onClick={() => addList(input)}>Ajouter</button>
+      <button onClick={() => addList(input)}>✅</button>
     </div>
   );
 };
