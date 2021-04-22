@@ -1,11 +1,9 @@
-import React from 'react';
-import ListGard from "./components/Listgard.jsx";
-
+import ListGard from "./components/Listgard";
 
 function App() {
   return (
     <div className="App">
-     <ListGard/>
+     <ListGard />
     </div>
   );
 }

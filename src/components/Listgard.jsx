@@ -1,34 +1,33 @@
-import React from "react";
-import { useState } from "react";
+import { useState } from 'react';
+import List from "./List";
+import TodoList from "./TodoList";
+import ListAdder from "./ListAdder";
 import './listgard.css';
 
 
-function ListGard(){
-   const [userInput, setUserInput] = useState("");
+const ListGard =()=> {
+  const [lists, setLists] = useState([
+    'Cascade de Sautadet',
+    'St laurent de Minier: cascade',
+    'Les Concluses de Lussan: Gorge',
+    'Gorge de Toulourenc: gorge',
+    'Les petites Aiguières: cascade'
+  ]);
+
+  const addList = (newList) => {  //Ajouter une nouvelle liste
+      setLists([...lists, newList])
+  }
+
+  const deleteList = (listToDelete) => {
+      setLists(lists.filter(l => l!==listToDelete))  //Supprimer une liste
+  }
     return(
-        <div>
-            <h1 className="title">Liste des voyages à faire en France</h1>
-                <div className = "card">
-                    <h2>Département du Gard</h2>
-                    <ul className="messages">
-                        <li>Cascade de Sautadet</li>
-                        <li>St laurent de Minier: cascade</li>
-                        <li>Les Concluses de Lussan: Gorge</li>
-                        <li>Gorge de Toulourenc: gorge</li>
-                        <li>Les petites Aiguières: cascade</li>
-                    </ul>
-                
-            <form>
-                <input
-                    type="text"
-                    value={userInput}
-                    onChange={(event) => setUserInput(event.target.value)}
-                 />
-                <button>Ajouter un lieu</button>
-            </form>
-        </div>
-        </div>
-        
-  );
-}
+         <>
+            <ListAdder addList={addList}/>
+            <TodoList>
+                {lists.map(l => <List deleteList={deleteList} listName={l}/>)}
+            </TodoList>
+        </>     
+ );           
+}        
 export default ListGard;
