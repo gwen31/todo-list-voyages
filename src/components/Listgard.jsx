@@ -5,7 +5,7 @@ import ListAdder from "./ListAdder";
 
 
 
-const ListGard =()=> {
+const ListGard = () => {
   const [lists, setLists] = useState([
     'Cascade de Sautadet',
     'St laurent de Minier: cascade',
@@ -15,19 +15,20 @@ const ListGard =()=> {
   ]);
 
   const addList = (newList) => {  //Ajouter une nouvelle liste
-      setLists([...lists, newList])
+    setLists([...lists, newList])
   }
 
   const deleteList = (listToDelete) => {
-      setLists(lists.filter(l => l!==listToDelete))  //Supprimer une liste
+    setLists(lists.filter(l => l !== listToDelete))  //Supprimer une liste
   }
-    return(
-         <>
-            <ListAdder addList={addList}/>
-            <TodoList>
-                {lists.map(l => <List deleteList={deleteList} listName={l}/>)}
-            </TodoList>
-        </>     
- );           
-}        
+  return (
+    <div className="card">
+      <h2>Le Gard</h2>
+      <ListAdder addList={addList} />
+      <TodoList>
+        {lists.map(l => <List deleteList={deleteList} listName={l} />)}
+      </TodoList>
+    </div>
+  );
+}
 export default ListGard;

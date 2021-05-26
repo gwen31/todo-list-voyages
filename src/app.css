@@ -1,3 +1,14 @@
+.container{
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 20px;
+    padding: 40px;
+    
+}
+
 body{
     background-color: rgb(211, 207, 207);
 }
@@ -14,9 +25,9 @@ li{
 }
 .card{
     width: 400px;
-    margin: auto;
-    padding: 10px;
+    margin-bottom: 10px;
     border-radius: 25px;
+    box-shadow: 10px 5px 5px rgb(187, 185, 185);
     background-color:rgb(250, 244, 244);
 }
 button{
